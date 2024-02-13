@@ -1,31 +1,105 @@
-const pregunta_1 = "¿Tu problema es con hardware?";
+const C = "¿Es hombre-no o mujer-si?";
+const D = "¿Orina demasiado?";
+const E = "¿Siente la necesidad de tomar mucha agua constantemente?";
+const F = "En un tiempo cercano, ¿ha experimento una perdida repentina de peso?";
+const G = "¿Se siente débil?";
+const H = "¿Siente la necesidad de comer constantemente?";
+const I = "En su zona intima, ¿Reconoce un líquido blanco espeso y abundante?";
+const J = "¿Tiene vista borrosa?";
+const K = "¿Siente picazón en su piel?";
+const L = "¿Se irrita fácilmente?";
+const M = "¿Cuánto tiempo tarda en cicatrizarle una herida pequeña? (mayor a 7 dias es “si” y menor a 7 es “no”";
+const N = "¿Siente una disminución en su fuerza?";
+const O = "¿Siente sus músculos tensos?";
+const P = "¿Padece de alopecia?";
+const Q = "Ingrese su estatura y peso (Calcular imc para ver si tiene sobrepeso)";
+const si = 'Tienes diabetes';
+const no = 'no tienes diabetes';
+
+
 
 const arbolBinario = {
-    pregunta: pregunta_1,
+    pregunta: E,
     si: {
-        pregunta: "¿Tu problema es con el disco duro?",
+        pregunta: D,
         si: {
-            pregunta: "¿Está haciendo ruido el disco duro?",
-            si: "Reemplaza el disco duro",
-            no: "Contacta a un técnico"
+            pregunta: C,
+            si: si,
+            no: si
         },
         no: {
-            pregunta: "¿Tu problema es con la tarjeta madre?",
-            si: "Reemplaza la tarjeta madre",
-            no: "Contacta a un técnico"
+            pregunta: L,
+            si: {
+                pregunta: C,
+                si: si,
+                no: si
+            },
+            no: {
+                pregunta: F,
+                si: si,
+                no: si
+            }
         }
     },
     no: {
-        pregunta: "¿Tu problema es con software?",
+        pregunta: D,
         si: {
-            pregunta: "¿El software se congela con frecuencia?",
-            si: "Reinstala el sistema operativo",
-            no: "Actualiza tus controladores de dispositivo"
+            pregunta: J,
+            si: {
+                pregunta: I,
+                si: {
+                    pregunta: C,
+                    si: si,
+                    no: si
+                },
+                no: {
+                    pregunta: K,
+                    si: si,
+                    no: si
+                }
+            },
+            no: {
+                pregunta: C,
+                si: si,
+                no: si
+            } 
         },
         no: {
-            pregunta: "¿Tu problema es con periféricos?",
-            si: "Revisa los cables y conexiones de tus periféricos",
-            no: "Contacta a un técnico"
+            pregunta: M,
+            si: {
+                pregunta: P,
+                si: {
+                    pregunta: K,
+                    si: {
+                        pregunta: C,
+                        si: si,
+                        no: si
+                    },
+                    no: {
+                        pregunta: F,
+                        si: si,
+                        no: si
+                    }
+                },
+                no: {
+                    pregunta: C,
+                    si: si,
+                    no: si
+                }
+            },
+            no: {
+                pregunta: C,
+                si: {
+                    pregunta: F,
+                    si: si,
+                    no: si
+                },
+                no: {
+                    pregunta: P,
+                    si: si,
+                    no: si
+                }
+            }
         }
     }
 };

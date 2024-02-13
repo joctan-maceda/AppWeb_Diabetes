@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Árbol de Decisión</title>
+    <%- include('partials/head') %>
 </head>
 <body>
+    <%- include('partials/navigation') %>
+
     <h1><%= pregunta %></h1>
     <form action="/respuesta" method="post">
         <button type="submit" name="respuesta" value="si">Sí</button>

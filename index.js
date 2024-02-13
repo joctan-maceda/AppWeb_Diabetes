@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 
 app.use(router);
-app.use(express.static("public"));
+app.use(express.static(join(__dirname, "public")));
 app.listen(port, function(){
 });
 

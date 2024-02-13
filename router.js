@@ -2,7 +2,8 @@ import { Router } from "express";
 import arbol from './arbol.js'
 
 const router = Router();
-let preguntaActual = arbol;
+const arbolOriginal = arbol;
+var preguntaActual = arbolOriginal;
 
 router.get('/', (req, res) => res.render('index', { pregunta: preguntaActual.pregunta }) );
 
@@ -11,7 +12,7 @@ router.post('/respuesta', (req, res) => {
     preguntaActual = preguntaActual[respuesta];
     if (typeof preguntaActual === 'string') {
         res.render('respuesta', { respuesta: preguntaActual });
-        preguntaActual = arbolBinario;
+        preguntaActual = arbolOriginal;
     } else {
         res.redirect('/');
     }
