@@ -17,7 +17,6 @@ const si = 'Tienes diabetes';
 const no = 'no tienes diabetes';
 
 
-
 const arbolBinario = {
     pregunta: E,
     si: {
@@ -25,19 +24,19 @@ const arbolBinario = {
         si: {
             pregunta: C,
             si: si,
-            no: si
+            no: no
         },
         no: {
             pregunta: L,
             si: {
                 pregunta: C,
                 si: si,
-                no: si
+                no: no
             },
             no: {
                 pregunta: F,
                 si: si,
-                no: si
+                no: no
             }
         }
     },
@@ -50,18 +49,18 @@ const arbolBinario = {
                 si: {
                     pregunta: C,
                     si: si,
-                    no: si
+                    no: no
                 },
                 no: {
                     pregunta: K,
                     si: si,
-                    no: si
+                    no: no
                 }
             },
             no: {
                 pregunta: C,
                 si: si,
-                no: si
+                no: no
             } 
         },
         no: {
@@ -73,18 +72,18 @@ const arbolBinario = {
                     si: {
                         pregunta: C,
                         si: si,
-                        no: si
+                        no: no
                     },
                     no: {
                         pregunta: F,
                         si: si,
-                        no: si
+                        no: no
                     }
                 },
                 no: {
                     pregunta: C,
                     si: si,
-                    no: si
+                    no: no
                 }
             },
             no: {
@@ -92,12 +91,12 @@ const arbolBinario = {
                 si: {
                     pregunta: F,
                     si: si,
-                    no: si
+                    no: no
                 },
                 no: {
                     pregunta: P,
                     si: si,
-                    no: si
+                    no: no
                 }
             }
         }

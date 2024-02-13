@@ -5,7 +5,7 @@ const router = Router();
 const arbolOriginal = arbol;
 var preguntaActual = arbolOriginal;
 
-router.get('/', (req, res) => res.render('index', { pregunta: preguntaActual.pregunta }) );
+router.get('/', (req, res) => res.render('index', { pregunta: preguntaActual.pregunta}) );
 
 router.post('/respuesta', (req, res) => {
     const respuesta = req.body.respuesta;
