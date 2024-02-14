@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Decisión</title>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <div class="container">
+        
+          
+            <form action="/respuesta" method="post">
+                <h1 class="display-3 text-center"><%= pregunta %></h1>
+                <div id="but" class="justify-content-center">
+                    <button type="submit" class="btn btn-primary btn-lg d-block mx-auto" name="respuesta" value="si">Sí</button>
+                    <button type="submit" class="btn btn-primary btn-lg d-block mx-auto" name="respuesta" value="no">No</button>
+                </div>              
+            </form>
+          
+        
+      </div>
+    
+</body>
+</html>

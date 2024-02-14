@@ -5,7 +5,11 @@ const router = Router();
 const arbolOriginal = arbol;
 var preguntaActual = arbolOriginal;
 
-router.get('/', (req, res) => res.render('index', { pregunta: preguntaActual.pregunta}) );
+router.get('/', (req, res) => {
+    res.render('index');
+});
+
+router.get('/pregunta', (req, res) => res.render('pregunta', { pregunta: preguntaActual.pregunta}) );
 
 router.post('/respuesta', (req, res) => {
     const respuesta = req.body.respuesta;
@@ -14,7 +18,7 @@ router.post('/respuesta', (req, res) => {
         res.render('respuesta', { respuesta: preguntaActual });
         preguntaActual = arbolOriginal;
     } else {
-        res.redirect('/');
+        res.redirect('/pregunta');
     }
 });
 
