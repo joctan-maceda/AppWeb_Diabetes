@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Respuesta</title>
-    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/inicio.css" type="text/css">
 </head>
 <body>
+  <div class="absolute">
+    <div class="absolute inset-0 justify-content-center">
+        <div class="bg-shape1 bg-teal opacity-50 bg-blur"></div>
+        <div class="bg-shape2 bg-primary opacity-50 bg-blur"></div>
+        <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>  
+    </div>
     <div class="container">
-        
-            <form>
-                <h1 class="display-1"><%= respuesta %></h1>
-              <a href="/">Volver al inicio</a>
-            </form>
+            <h1 ><%= respuesta %></h1>
+            <a class="btn" href="/">Volver al inicio</a>
+
       </div>
     
-    
+  </div>
     
 </body>
 </html>

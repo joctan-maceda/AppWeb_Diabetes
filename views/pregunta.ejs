@@ -7,19 +7,21 @@
     <%- include('partials/head') %>
 </head>
 <body>
-    <div class="container">
-        
-          
+    <div class="absolute">
+        <div class="absolute inset-0 justify-content-center">
+            <div class="bg-shape1 bg-teal opacity-50 bg-blur"></div>
+            <div class="bg-shape2 bg-primary opacity-50 bg-blur"></div>
+            <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>  
+        </div> 
+        <div class="container glass">
             <form action="/respuesta" method="post">
-                <h1 class="display-3 text-center"><%= pregunta %></h1>
-                <div id="but" class="justify-content-center">
-                    <button type="submit" class="btn btn-primary btn-lg d-block mx-auto" name="respuesta" value="si">Sí</button>
-                    <button type="submit" class="btn btn-primary btn-lg d-block mx-auto" name="respuesta" value="no">No</button>
+                <h1 ><%= pregunta %></h1>
+                <div class="but" >
+                    <button type="submit"  name="respuesta" value="si">Sí</button>
+                    <button type="submit"  name="respuesta" value="no">No</button>
                 </div>              
             </form>
-          
-        
-      </div>
-    
+        </div>
+    </div>
 </body>
 </html>

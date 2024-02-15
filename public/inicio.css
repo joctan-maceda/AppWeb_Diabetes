@@ -1,0 +1,109 @@
+body{
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.absolute{
+position: absolute;
+top: 50x !important;
+inset: 0;
+justify-content: center;
+display: inline-flex;
+flex-direction: row;
+}
+
+.justify-center{
+justify-content: center;
+}
+
+.bg-shape1{
+width: 400px;
+height: 400px;
+border-radius: 9999px;
+position: relative; 
+animation: one 10s infinite; 
+}
+
+.bg-shape2{
+width: 300px;
+height: 300px;
+border-radius: radius 999px;
+position:relative;
+animation: two, 10s, infinite;
+}
+
+@keyframes one{
+0%{left: 0px; top: 0px;}
+25%{left: -100px; top: 70px;}
+50%{left: 20px; top: 150px;}
+75%{left: 50px; top: 100px;}
+100%{left: 0px; top: 0px;}
+}
+
+@keyframes two{
+0%{left: 0px; top: 0px;}
+25%{left: 50px; top: 10px;}
+50%{left: 100px; top: 50px;}
+75%{left: 50px; top: 100px;}
+100%{left: 0px; top: 0px;}
+}
+
+.opacity-50{
+opacity: .5;
+} 
+
+.bg-blur{
+filter: blur(90px);
+}
+
+.bg_primary{
+background-color: rgb(30,0,225);
+}
+
+.bg-teal{
+background-color: rgb(225, 75, 173);
+}
+
+.bg-purple{
+background-color: rgb(140, 0, 215);
+}
+
+.btn{
+    background-color: rgb(167, 89, 240);
+    border: 10px;
+    border-radius: 5px;
+    width: 140px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 600;
+    color: black;
+}
+
+.btn:hover{
+    background-color: rgb(183, 108, 253);
+}
+
+.container{
+        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 75%; 
+    height: 65%;
+    margin-top: 110px;
+  }
+
+.form{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}

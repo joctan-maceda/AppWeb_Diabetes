@@ -1,4 +1,4 @@
-const C = "¿Es hombre-no o mujer-si?";
+const C = "¿Es mujer?";
 const D = "¿Orina demasiado?";
 const E = "¿Siente la necesidad de tomar mucha agua constantemente?";
 const F = "En un tiempo cercano, ¿ha experimento una perdida repentina de peso?";
@@ -13,8 +13,8 @@ const N = "¿Siente una disminución en su fuerza?";
 const O = "¿Siente sus músculos tensos?";
 const P = "¿Padece de alopecia?";
 const Q = "Ingrese su estatura y peso (Calcular imc para ver si tiene sobrepeso)";
-const si = 'Tienes diabetes';
-const no = 'no tienes diabetes';
+const si = 'Positivo en el test';
+const no = 'No positivo en el test';
 
 
 const arbolBinario = {
