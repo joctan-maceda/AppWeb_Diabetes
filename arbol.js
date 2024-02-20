@@ -1,76 +1,117 @@
 const C = "¿Es mujer?";
-const D = "¿Orina demasiado?";
-const E = "¿Siente la necesidad de tomar mucha agua constantemente?";
-const F = "En un tiempo cercano, ¿ha experimento una perdida repentina de peso?";
-const G = "¿Se siente débil?";
-const H = "¿Siente la necesidad de comer constantemente?";
-const I = "En su zona intima, ¿Reconoce un líquido blanco espeso y abundante?";
-const J = "¿Tiene vista borrosa?";
-const K = "¿Siente picazón en su piel?";
-const L = "¿Se irrita fácilmente?";
-const M = "¿Cuánto tiempo tarda en cicatrizarle una herida pequeña? (mayor a 7 dias es “si” y menor a 7 es “no”";
-const N = "¿Siente una disminución en su fuerza?";
-const O = "¿Siente sus músculos tensos?";
-const P = "¿Padece de alopecia?";
-const Q = "Ingrese su estatura y peso (Calcular imc para ver si tiene sobrepeso)";
+const D = "¿Tienes emisión de volumen excesivo de orina?";
+const E = "¿Tienes aumento anormal de sed?";
+const F = "¿Has tenido pérdida repentina de peso?";
+const G = "¿Has sentido debilidad?";
+const H = "¿Tienes aumento anormal en la necesidad de comer?";
+const I = "¿Tienes Flujo, ardor, picazón, irritación genital?";
+const J = "¿Tienes visión borrosa?";
+const K = "¿Tienes picazón en la piel, que hace que quieras rascarte?";
+const L = "¿Sufres de Irritabilidad?";
+const M = "¿Tienes cicatrización retardada?";
+const N = "¿Tienes disminución de la fuerza, debilidad muscular.?";
+const O = "¿Tienes dolor en las articulaciones?";
+const P = "¿Tienes pérdida anormal del cabello?";
+const Q = "¿Tienes sobrepeso?";
+const R = "¿Tienes mas de 50 años?";
 const si = 'Positivo en el test';
 const no = 'No positivo en el test';
 
 
 const arbolBinario = {
-    pregunta: E,
+    pregunta: R,
     si: {
         pregunta: D,
         si: {
-            pregunta: C,
-            si: si,
-            no: no
-        },
-        no: {
-            pregunta: L,
+            pregunta: Q,
             si: {
-                pregunta: C,
-                si: si,
-                no: no
-            },
-            no: {
-                pregunta: F,
-                si: si,
-                no: no
-            }
-        }
-    },
-    no: {
-        pregunta: D,
-        si: {
-            pregunta: J,
-            si: {
-                pregunta: I,
+                pregunta: E,
                 si: {
                     pregunta: C,
                     si: si,
                     no: no
                 },
                 no: {
-                    pregunta: K,
+                    pregunta: F,
                     si: si,
                     no: no
                 }
             },
             no: {
-                pregunta: C,
+                pregunta: L,
                 si: si,
                 no: no
-            } 
+            }
         },
         no: {
-            pregunta: M,
+            pregunta: C,
             si: {
-                pregunta: P,
+                pregunta: O,
                 si: {
-                    pregunta: K,
+                    pregunta: E,
+                    si: si,
+                    no: no
+                },
+                no: {
+                    pregunta: J,
                     si: {
-                        pregunta: C,
+                        pregunta: E,
+                        si: si,
+                        no: no
+                    },
+                    no: {
+                        pregunta: Q,
+                        si: {
+                            pregunta: E,
+                            si: si,
+                            no: no
+                        },
+                        no: {
+                            pregunta: L,
+                            si: {
+                                pregunta: E,
+                                si: si,
+                                no: no
+                            },
+                            no: {
+                                pregunta: G,
+                                si: {
+                                    pregunta: E,
+                                    si: si,
+                                    no: no
+                                },
+                                no: {
+                                    pregunta: F,
+                                    si: {
+                                        pregunta: E,
+                                        si: si,
+                                        no: no
+                                    },
+                                    no: {
+                                        pregunta: H,
+                                        si: {
+                                            pregunta: E,
+                                            si: si,
+                                            no: no
+                                        },
+                                        no: {
+                                            pregunta: E,
+                                            si: "NO hay respuesta",
+                                            no: "NO hay respuesta"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            no: {
+                pregunta: E,
+                si: {
+                    pregunta: N,
+                    si: {
+                        pregunta: H,
                         si: si,
                         no: no
                     },
@@ -81,26 +122,122 @@ const arbolBinario = {
                     }
                 },
                 no: {
-                    pregunta: C,
-                    si: si,
-                    no: no
+                    pregunta: M,
+                    si: {
+                        pregunta: P,
+                        si: {
+                            pregunta: K,
+                            si: {
+                                pregunta: F,
+                                si: si,
+                                no: no
+                            },
+                            no: {
+                                pregunta: F,
+                                si: si,
+                                no: no
+                            }
+                        },
+                        no: {
+                            pregunta: I,
+                            si: si,
+                            no: no    
+                        }
+                    },
+                    no: {
+                        pregunta: O,
+                        si: si,
+                        no: no
+                    }
                 }
+            }
+        }
+    },
+    no: {
+        pregunta: E,
+        si: {
+            pregunta: D,
+            si: {
+                pregunta: C,
+                si: si,
+                no: no
             },
             no: {
-                pregunta: C,
+                pregunta: L,
                 si: {
-                    pregunta: F,
+                    pregunta: C,
                     si: si,
                     no: no
                 },
                 no: {
-                    pregunta: P,
+                    pregunta: F,
                     si: si,
                     no: no
                 }
             }
+        },
+        no: {
+            pregunta: D,
+            si: {
+                pregunta: J,
+                si: {
+                    pregunta: I,
+                    si: {
+                        pregunta: C,
+                        si: si,
+                        no: no
+                    },
+                    no: {
+                        pregunta: K,
+                        si: si,
+                        no: no
+                    }
+                },
+                no: {
+                    pregunta: C,
+                    si: si,
+                    no: no
+                } 
+            },
+            no: {
+                pregunta: M,
+                si: {
+                    pregunta: P,
+                    si: {
+                        pregunta: K,
+                        si: {
+                            pregunta: C,
+                            si: si,
+                            no: no
+                        },
+                        no: {
+                            pregunta: F,
+                            si: si,
+                            no: no
+                        }
+                    },
+                    no: {
+                        pregunta: C,
+                        si: si,
+                        no: no
+                    }
+                },
+                no: {
+                    pregunta: C,
+                    si: {
+                        pregunta: F,
+                        si: si,
+                        no: no
+                    },
+                    no: {
+                        pregunta: P,
+                        si: si,
+                        no: no
+                    }
+                }
+            }
         }
-    }
+    }    
 };
 
 export default arbolBinario;
