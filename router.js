@@ -9,6 +9,10 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
+router.get('/presentacion', (req, res) => {
+    res.render('presentacion');
+})
+
 router.get('/pregunta', (req, res) => res.render('pregunta', { pregunta: preguntaActual.pregunta}) );
 
 router.post('/respuesta', (req, res) => {

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol de Decisión</title>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <div class="absolute">
+        <div class="absolute inset-0 justify-content-center">
+            <div class="bg-shape1 bg-teal opacity-50 bg-blur"></div>
+            <div class="bg-shape2 bg-primary opacity-50 bg-blur"></div>
+            <div class="bg-shape1 bg-purple opacity-50 bg-blur"></div>  
+        </div> 
+        <div class="container glass">
+            <form action="/respuesta" method="post">
+                <h1 >Contesta las siguientes preguntas</h1>
+                <div class="but" >
+                    <a href="/pregunta" class="btn">COMENZAR</a>
+                </div>              
+            </form>
+        </div>
+    </div>
+</body>
+</html>
